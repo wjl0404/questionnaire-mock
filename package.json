@@ -1,0 +1,22 @@
+{
+  "name": "questionnaire-mock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/node": "^2.15.3",
+    "mockjs": "^1.1.0",
+    "nodemon": "^2.0.22"
+  },
+  "devDependencies": {
+    "koa": "^2.14.2",
+    "koa-router": "^12.0.0"
+  }
+}
