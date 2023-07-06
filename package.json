@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@vercel/node": "^2.15.3",
+    "koa-cors": "^0.0.16",
     "mockjs": "^1.1.0",
     "nodemon": "^2.0.22"
   },

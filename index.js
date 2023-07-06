@@ -1,7 +1,9 @@
 var Koa = require("koa");
 var Router = require("koa-router");
 const mockList = require("./mock/index");
+const cors = require("koa-cors");
 var app = new Koa();
+app.use(cors);
 var router = new Router();
 
 async function getResponse(fn, ctx) {
