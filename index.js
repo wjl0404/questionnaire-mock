@@ -12,7 +12,9 @@ async function getResponse(fn, ctx) {
     }, 500);
   });
 }
-
+router.get("/", (ctx) => {
+  ctx.body = "hello";
+});
 mockList.forEach((item) => {
   const { url, method, response } = item;
   router[method](url, async (ctx) => {
