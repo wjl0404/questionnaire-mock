@@ -9,7 +9,7 @@ async function getResponse(fn, ctx) {
     setTimeout(() => {
       const res = fn(ctx);
       resolve(res);
-    }, 500);
+    }, 0);
   });
 }
 router.get("/", (ctx) => {
