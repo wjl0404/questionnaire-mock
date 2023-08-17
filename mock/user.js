@@ -12,6 +12,9 @@ module.exports = [
           username: Random.title(),
           nickname: Random.cname(),
         },
+
+        // errno: 1,
+        // msg: "failed",
       };
     },
   },

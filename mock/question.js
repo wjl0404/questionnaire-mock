@@ -1,5 +1,6 @@
 const Mock = require("mockjs");
 const Random = Mock.Random;
+const getComponentList = require("./data/getComponentList");
 const getQuestionList = require("./data/getQuestionList");
 module.exports = [
   {
@@ -12,6 +13,12 @@ module.exports = [
         data: {
           id: Random.id(),
           title: Random.ctitle(),
+          desc: "this is a description",
+          css: "",
+          js: "",
+          isDeleted: false,
+          isPublished: true,
+          componentList: getComponentList(),
         },
       };
     },
