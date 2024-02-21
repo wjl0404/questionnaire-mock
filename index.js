@@ -23,7 +23,7 @@ mockList.forEach((item) => {
   const { url, method, response } = item;
   router[method](url, async (ctx) => {
     const res = await getResponse(response, ctx);
-    ctx.set('Access-Control-Allow-Origin', 'http://localhost:8000');
+    ctx.set('Access-Control-Allow-Origin', '*');
     ctx.set('Access-Control-Allow-Credentials', 'true');
     ctx.body = res;
   });
