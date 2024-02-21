@@ -16,6 +16,8 @@ async function getResponse(fn, ctx) {
 }
 router.get("/", (ctx) => {
   ctx.set('Access-Control-Allow-Origin', '*');
+  ctx.set('Access-Control-Allow-Methods','*');
+  ctx.set('Access-Control-Allow-Headers','*');
   ctx.set('Access-Control-Allow-Credentials', 'true');
   ctx.body = "hello";
 });
@@ -24,10 +26,12 @@ mockList.forEach((item) => {
   router[method](url, async (ctx) => {
     const res = await getResponse(response, ctx);
     ctx.set('Access-Control-Allow-Origin', '*');
-    ctx.set('Access-Control-Allow-Credentials', 'true');
+  ctx.set('Access-Control-Allow-Methods','*');
+  ctx.set('Access-Control-Allow-Headers','*');
+  ctx.set('Access-Control-Allow-Credentials', 'true');
     ctx.body = res;
   });
 });
 
 app.use(router.routes());
-app.listen(3000);
+app.listen(3001);
