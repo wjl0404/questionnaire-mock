@@ -15,7 +15,7 @@ async function getResponse(fn, ctx) {
   });
 }
 router.get("/", (ctx) => {
-  ctx.set('Access-Control-Allow-Origin', 'http://localhost:8000');
+  ctx.set('Access-Control-Allow-Origin', '*');
   ctx.set('Access-Control-Allow-Credentials', 'true');
   ctx.body = "hello";
 });
